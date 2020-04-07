@@ -38,23 +38,32 @@ def getPageText(url):
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as response:
         return response.read()
-term = 'computer'
-url = getSearchURL(term)
-pageText = getPageText(url)
-#print(pageText)
 
-soup = BeautifulSoup(pageText, 'html.parser')
-soup_head = soup.head
-soup_cont = soup_head.contents  
-print(soup_cont)
-print(soup_cont[0])
-computeratags = soup.find_all('a', 's-item__title')
-totaltitles = 0 
-subtitles = 0
+def main():
+    term = 'computer'
+    url = getSearchURL(term)
+    pageText = getPageText(url)
+    #print(pageText)
+    
+    soup = BeautifulSoup(pageText, 'html.parser')
 
-print(computeratags)
-
-for comp in computeratags:
-    title = comp.find('span').string
+    computerdivprice = soup.find_all('div', 's-item__detail s-item__detail--primary')
+    
+    #print(computerdivprice)
+    title = []
+    
+    counter = 0
+    for comp in computerdivprice:
+        counter += 1
+        try:
+            title.append(comp.find('span', {'class' : 's-item__price'}).string)
+        except NameError:
+            pass
+        try:
+            title.append(comp.find('span', {'class' : 's-item__price'}).string)
+        except AttributeError:
+            pass
     print(title)
+          
+main()
     
