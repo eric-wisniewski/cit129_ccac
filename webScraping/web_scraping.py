@@ -39,6 +39,18 @@ def getPageText(url):
     with urllib.request.urlopen(req) as response:
         return response.read()
 
+
+def avg(money_list):
+    tot = 0
+    counter = 0
+    for i in money_list:
+        counter += 1
+        tot += i
+    avg = (tot/counter)
+    print('$', avg)
+        
+        
+        
 def main():
     term = 'computer'
     url = getSearchURL(term)
@@ -55,15 +67,11 @@ def main():
     counter = 0
     for comp in computerdivprice:
         counter += 1
-        try:
-            title.append(comp.find('span', {'class' : 's-item__price'}).string)
-        except NameError:
-            pass
-        try:
-            title.append(comp.find('span', {'class' : 's-item__price'}).string)
-        except AttributeError:
-            pass
+        p = comp.find('span', {'class' : 's-item__price'})
+        if p:
+            title.append(p.string)
     print(title)
-          
+    #avg(title)      
+
 main()
     
