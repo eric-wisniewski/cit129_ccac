@@ -21,6 +21,7 @@ Before scraping a page, check:
 
 '''
 
+import re
 import urllib
 from bs4 import BeautifulSoup
 
@@ -40,9 +41,8 @@ def getPageText(url):
         return response.read()
 
 
-def avg(money_list):
+def avg(money_list, counter):
     tot = 0
-    counter = 0
     for i in money_list:
         counter += 1
         tot += i
@@ -62,15 +62,20 @@ def main():
     computerdivprice = soup.find_all('div', 's-item__detail s-item__detail--primary')
     
     #print(computerdivprice)
-    title = []
+    nav_string = []
+    price = []
     
     counter = 0
     for comp in computerdivprice:
         counter += 1
         p = comp.find('span', {'class' : 's-item__price'})
         if p:
-            title.append(p.string)
-    print(title)
+            str(p)
+            [float(x) for x in re.match("\d+\.\d+", p)]
+            nav_string.append(p.string)
+    print(nav_string)
+    for i in nav_string:
+        print(type(i))
     #avg(title)      
 
 main()
