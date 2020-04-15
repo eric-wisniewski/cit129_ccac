@@ -6,7 +6,7 @@ Created on Wed Mar 9 17:36:18 2020
 """
 import re
 
-pattern = "[a-zA-Z0-9]+@[a-zA-Z]+\.(.com|edu|net|org)"
+pattern = "[a-zA-Z0-9]+@[a-zA-Z]+\.(com|edu|net|org)"
 
 user_input = input()
 
