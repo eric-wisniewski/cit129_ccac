@@ -11,9 +11,9 @@ pattern = "[a-zA-Z0-9]+@[a-zA-Z]+\.(com|edu|net|org)"
 user_input = input()
 
 if(re.search(pattern, user_input)):
-    print("valid_email")
+    print("valid email")
 else:
-    print("invalid_email")
+    print("invalid email")
     
     
     
