@@ -3,8 +3,8 @@
 This final project used the api on [this website](https://jobs.github.com/api). Specifications I used for the URL were , as well as the .json feature. 
 ## Requirements
 * URL Specifics: 
-	*'description=python' 
-	*'full_time=true'
+	* 'description=python' 
+	* 'full_time=true'
 	* Use .json
 
 
