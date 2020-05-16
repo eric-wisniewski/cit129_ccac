@@ -10,3 +10,6 @@ course, I have taken the first installment of Python within the CCAC Data
 Analytics program. I am looking forward to expanding my knowledge with coding, 
 not only from a personal level, but working inside and with a community to learn and 
 gain more experience. 
+
+## Final Project
+* [Final Project](https://github.com/eric-wisniewski/cit129_ccac/tree/master/Python2FinalProject)
