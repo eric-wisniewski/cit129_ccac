@@ -12,10 +12,10 @@ This final project used the api on [this website](https://jobs.github.com/api). 
 
 ## My Analysis
 
-With information [Python2_FinalProject.py](https://github.com/eric-wisniewski/cit129_ccac/blob/master/Python2FinalProject/Python2_FinalProject.py) given from , it wil find:
-	* The total number of jobs with the paramters in the search bar. With most of my searches, I found the average number to be 550 jobs.
-	* The difference, in percentages, of the jobs that are full time and part time. On most calls from the URL, 95% are full time and 5% are part time. Recently, the jobs have been split 50/50 between full and part time.
-	* The total count of 3 words in all titles. The words I selected were 'Engineer', 'Developer', and 'Senior'. In my most recent search, as of May 13 2020, 'Engineer' appears in 264 titles, 'Developer' shows up in 165 titles, and 'Senior' is in 121 titles.
+With information given from [Python2_FinalProject.py](https://github.com/eric-wisniewski/cit129_ccac/blob/master/Python2FinalProject/Python2_FinalProject.py), it wil find:
+* The total number of jobs with the paramters in the search bar. With most of my searches, I found the average number to be 550 jobs.
+* The difference, in percentages, of the jobs that are full time and part time. On most calls from the URL, 95% are full time and 5% are part time. Recently, the jobs have been split 50/50 between full and part time.
+* The total count of 3 words in all titles. The words I selected were 'Engineer', 'Developer', and 'Senior'. In my most recent search, as of May 13 2020, 'Engineer' appears in 264 titles, 'Developer' shows up in 165 titles, and 'Senior' is in 121 titles.
 * With some minor tweaks to my code, one would get a wide array of results. For example:
 	* One could select different descriptions such as 'python', 'java', 'HTML', etc. The descripton term is aliased to search, therefore you can use other terms not listed to find a specific type of jobs.
 	* One could also search for a location either by city name, zip code, or lattitude and longitude. No location with lattitude and longitude. 
